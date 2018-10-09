@@ -4,6 +4,12 @@ import { Link } from 'react-router-dom'
 import BookShelf from '../BookShelf'
 
 class Home extends React.Component {
+  componentDidMount() {
+    BooksAPI.getAll()
+    .then(res => {
+      console.log(res);
+    });
+  }
   render() {
     return(
       <div className="list-books">
