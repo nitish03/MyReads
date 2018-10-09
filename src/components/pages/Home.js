@@ -8,12 +8,14 @@ class Home extends React.Component {
     super(props);
     this.state = {
       books: []
+
     }
   }
   componentDidMount() {
     BooksAPI.getAll()
     .then(res => {
       console.log(res);
+      this.setState({books: res});
     });
   }
   render() {
