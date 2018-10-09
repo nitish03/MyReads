@@ -20,6 +20,10 @@ class Search extends React.Component {
     });
   }
 
+  updateQuery = (query) => {
+    this.setState({query: query})
+  }
+
   updateShelf = (book, shelf) => {
     BooksAPI.update(book, shelf)
     .then(res => {
