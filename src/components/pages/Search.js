@@ -20,6 +20,17 @@ class Search extends React.Component {
     });
   }
 
+  updateShelf = (book, shelf) => {
+    BooksAPI.update(book, shelf)
+    .then(res => {
+      book.shelf = shelf;
+      this.setState(state => ({
+        books: state.books.filter(b => b.id !== book.id).concat([book])
+      }));
+    });
+  }
+
+
   render() {
     return(
       <div className="search-books">
