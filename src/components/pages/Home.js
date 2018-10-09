@@ -4,6 +4,12 @@ import { Link } from 'react-router-dom'
 import BookShelf from '../BookShelf'
 
 class Home extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      books: []
+    }
+  }
   componentDidMount() {
     BooksAPI.getAll()
     .then(res => {
@@ -18,7 +24,9 @@ class Home extends React.Component {
         </div>
         <div className="list-books-content">
         <div>
-          <BookShelf/>
+          <BookShelf title="Currently Reading" books={this.state.books.filter(b => b.shelf === "currentlyReading")}/>
+          <BookShelf title="Want To Read" books={this.state.books.filter(b => b.shelf === "wantToRead")}/>
+          <BookShelf title="Read" books={this.state.books.filter(b => b.shelf === "read")}/>
         </div>
         </div>
         <div className="open-search">
