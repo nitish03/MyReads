@@ -6,19 +6,23 @@ import BookShelf from '../BookShelf'
 class Home extends React.Component {
   constructor(props){
     super(props);
+    // set state for books of array
     this.state = {
       books: []
 
     }
   }
+
+  // get data of books from BooksAPI and set the state when component is mounted
   componentDidMount() {
     BooksAPI.getAll()
     .then(res => {
-      console.log(res);
+      // console.log(res);
       this.setState({books: res});
     });
   }
 
+ // move selected book from books shelf using update method from BooksAPI
   updateShelf = (book, shelf) => {
     BooksAPI.update(book, shelf)
     .then(res => {
