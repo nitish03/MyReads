@@ -15,9 +15,9 @@ class Book extends Component {
             <div className="book-cover"
               style={{ width: 128, height: 193,
                 // display books thumbnail
-              backgroundImage: `url(${book.imageLinks ? book.imageLinks.thumbnail :
-                'https://3.bp.blogspot.com/-s3yBaPBn8Hc/Uh4-wAZOQLI/AAAAAAAAJT8/GY9d_VJFm3o/s200/play-books-no-cover.jpg'})`
-              }}>
+                backgroundImage:`url(${book.imageLinks ? book.imageLinks.thumbnail :
+                  'https://3.bp.blogspot.com/-s3yBaPBn8Hc/Uh4-wAZOQLI/AAAAAAAAJT8/GY9d_VJFm3o/s200/play-books-no-cover.jpg'})`
+                }}>
             </div>
             <div className="book-shelf-changer">
               <select value={book.shelf || 'none'} onChange={(event) => {(updateShelf(book, event.target.value))}}>
