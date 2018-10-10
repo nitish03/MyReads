@@ -22,7 +22,21 @@ class Search extends React.Component {
   }
 
   updateQuery = (query) => {
-    this.setState({query: query});
+    this.setState({query: query}, this.searchBook);
+  }
+
+  searchBook(){
+    if(this.state.query === "" || this.state.query === undefined) {
+      return this.setState({ result : [] });
+    }
+    BooksAPI.search(this.state.query.trim()).then(res => {
+      console.log(res);
+      if(res.error) {
+        return this.setState({ result: [] });
+      } else {
+        return this.setState({ result: res});
+      }
+    });
   }
 
   render() {
