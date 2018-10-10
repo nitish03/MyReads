@@ -34,6 +34,12 @@ class Search extends React.Component {
       if(res.error) {
         return this.setState({ result: [] });
       } else {
+        res.forEach((b) => {
+          let show = this.state.books.filter(book => book.id === b.id);
+          if(show[0]) {
+            b.shelf = show[0].shelf;
+          }
+        });
         return this.setState({ result: res});
       }
     });
