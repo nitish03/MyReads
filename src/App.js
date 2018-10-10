@@ -6,7 +6,6 @@ import Search from './components/pages/Search'
 
 class BooksApp extends React.Component {
 
-
   render() {
    return(
      <div>
@@ -18,3 +17,12 @@ class BooksApp extends React.Component {
 }
 
 export default BooksApp
+
+
+/* Resourses
+Udacity Lessons and for more help:
+* https://reacttraining.com/react-router/web/guides/quick-start
+* https://reactjs.org/
+* https://www.youtube.com/watch?v=acJHkd6K5kI&=&feature=youtu.be
+* https://www.youtube.com/watch?v=bpKI3R0nf7E
+*/
