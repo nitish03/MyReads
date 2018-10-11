@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-The is a React project is provided by Udacity [https://www.udacity.com/]. The project is about tracking books, Home page has three book shelves:
+The is a React project is provided by [Udacity](https://www.udacity.com/). The project is about tracking books, Home page has three book shelves:
 1. Currently Reading - Those books are in this shelf which you are reading.
 2. Want To Read - Those books are in this shelf which you want to read.  
 3. Read - Those books are in this shelf which you have read.
@@ -18,7 +18,7 @@ There is also a search page to find all another books, If you click on the add s
 
 ## Backend Server
 
-Backend Server is provided by Udacity [https://www.udacity.com/]. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods needed to perform necessary operations on the backend:
+Backend Server is provided by [Udacity](https://www.udacity.com/). The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods needed to perform necessary operations on the backend:
 
 * [`getAll`](#getall)
 * [`update`](#update)
