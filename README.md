@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-The is a React project is provided by [Udacity](https://www.udacity.com/). The project is about tracking books, Home page has three book shelves:
+This is a React project provided by [Udacity](https://www.udacity.com/). The project is about tracking books, Home page has three book shelves:
 1. Currently Reading - Those books are in this shelf which you are reading.
 2. Want To Read - Those books are in this shelf which you want to read.  
 3. Read - Those books are in this shelf which you have read.
